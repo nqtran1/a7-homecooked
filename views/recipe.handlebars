@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>My Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <link href="/css/recipestyle.css" rel="stylesheet">
+  	<!-- add icon library -->
+	<script src="https://kit.fontawesome.com/4a1064862d.js" crossorigin="anonymous"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js%22%3E"></script>
+</head>
+
+<body>
+  <style> body {font-family: "Lato", sans-serif;} </style>
+  <div class="myrecipes">
+    <h1>My Recipes</h1>
+  </div>
+
+  <div class="big_container">
+    
+    <!-- Search bar -->
+    <form class="search" action="/recipe">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_self" href="/recipecard">
+    <div style="width: 100%; height: 170px; overflow: hidden; object-fit:cover">
+      <img src="https://myfoodblog.com.au/wp-content/uploads/2017/07/Mushroom-Spaghetti-Bolognese-feature-400x300.jpg" 
+      alt="Food" width="400" height="200">
+    </div> 
+    </a>
+    <div class="desc">Ziti Pasta
+      <a href="/recipecard" style="text-decoration:none;">
+      <p style="font-style: italic;">Cook: Molly W.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_self" href="/recipecard">
+    <div style="width: 100%; height: 170px; overflow: hidden; object-fit:cover">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/HaluskyzoZiaru.JPG/320px-HaluskyzoZiaru.JPG" 
+      alt="Food" width="400" height="200">
+    </div>
+    </a>
+    <div class="desc"> Homecooked Haluskyzo Ziaru
+      <a href="/recipecard" style="text-decoration:none;">
+      <p style="font-style: italic;">Cook: Molly W.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_self" href="/recipecard">
+    <div style="width: 100%; height: 170px; overflow: hidden;object-fit:cover">
+      <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/portion_sizes_slideshow/getty_rm_photo_of_fish_meal_on_small_plate.jpg" 
+      alt="Food" width="400" height="200">
+    </div>
+    </a>
+    <div class="desc">Easy and healthy fish and rice
+      <a href="/recipecard" style="text-decoration:none;">
+      <p style="font-style: italic;">Cook: Blaise Z.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="clearfix"></div>
+</div>
+
+<div class="addmore">
+  <a href="/upload">
+				<button class="button"><i class="fas fa-plus"></i></button>
+	</a>
+</div>
+
+ 		<div class="navbar">
+			<a href="/homepage">
+				<button class="btnhome"><i class="fas fa-home"></i></button>	
+			</a>
+			<a href="/profile">
+				<button class="btnprofile"><i class="far fa-user"></i></button>	
+			</a>
+			<a href="/upload">
+				<button class="btnadd"><i class="far fa-plus-square"></i></button>	
+			</a>
+		</div>
+</body>
+</html>

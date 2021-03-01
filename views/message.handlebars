@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>Message Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
+	<link href="/css/message.css" rel="stylesheet">
+	<!-- add icon library -->
+	<script src="https://kit.fontawesome.com/4a1064862d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js%22%3E"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Send and receive recipes.</h1>
+        </div>
+
+        <style>
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #peachpuff;
+        width: 30%;
+        height: 600px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+        display: block;
+        background-color: peachpuff;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: 1px solid orange;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+        background-color: orange;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+        background-color: orange;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid #ccc;
+        width: 70%;
+        border-left: none;
+        height: 600px;
+        }
+        </style>
+        </head>
+        <body>
+
+        <p>Check who sent you a recipe.</p>
+
+        <!-- Search bar -->
+        <form class="search" action="/message">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+{{#each messages}}
+        <div class="tab">
+        <button class="tablinks" onclick="openMsg(event, 'User1')" id="defaultOpen">{{person}}</button>
+        <button class="tablinks" onclick="openMsg(event, 'User2')">Gordon R.</button>
+        <button class="tablinks" onclick="openMsg(event, 'User3')">Dean T.</button>
+
+        </div>
+
+        <div id="User1" class="tabcontent">
+        <h3>{{title}}</h3>
+        <p>{{descrip}}</p>
+            <figure>
+            <img src="{{image}}" alt="Meal" width="400" height="200">
+            </figure>
+            <a href="/recipecard" style="text-decoration:none;">
+                <button class="button recipe">See more</button>
+            </a>
+        </div>
+        
+        {{/each}}
+
+        <div id="User2" class="tabcontent">
+        <h3>Xiao Long Bao</h3>
+        <p>I learned to make this from my host family.</p> 
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Xiao_Long_Bao_at_Nanxiang_Mantou_Dian_1.jpg" alt="Meal" width="400" height="200">
+            </figure>
+            <a href="/recipecard" style="text-decoration:none;">
+                <button class="button recipe">See more</button>
+            </a>
+        </div>
+
+        <div id="User3" class="tabcontent">
+        <h3>Tomato Soup</h3>
+        <p>Good for a cold winter afternoon.</p>
+        <figure>
+            <img src="http://www.onceuponarecipeblog.com/wp-content/uploads/2013/01/DSC_0617-1024x680.jpg" alt="Meal" width="400" height="200">
+            </figure>
+            <a href="/recipecard" style="text-decoration:none;">
+                <button class="button recipe">See more</button>
+            </a>
+        </div>
+
+        <script>
+        function openMsg(evt, usermsg) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(usermsg).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+        
+    </div>
+
+ 		<div class="navbar">
+			<a href="/homepage">
+				<button class="btnhome"><i class="fas fa-home"></i></button>	
+			</a>
+			<a href="/profile">
+				<button class="btnprofile"><i class="far fa-user"></i></button>	
+			</a>
+			<a href="/upload">
+				<button class="btnadd"><i class="far fa-plus-square"></i></button>	
+			</a>
+		</div>
+</body>
+</html>

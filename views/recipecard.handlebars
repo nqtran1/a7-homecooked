@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Recipe Card</title>
+	<meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	<link href="/css/recipecard.css" rel="stylesheet">
+	<!-- add icon library -->
+	<script src="https://kit.fontawesome.com/4a1064862d.js" crossorigin="anonymous"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js%22%3E"></script>
+
+</head>
+<!-- This is the page that allows users to look at a specific recipe card -->
+<body>
+<div class="container">
+{{#each messages}}
+	<div class="profiletab">
+		<img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg" 
+		alt="Avatar" class="avatar">
+		<a href="/message" style="text-decoration:none;">
+		<h1 style="font-size: 24px; padding: 10px; margin-top: 30px; float: left;">{{person}}</h1>
+		</a>
+	</div>
+
+<div class="card" style="bottom-margin:30px;">
+	<div style="width: 100%; height: 375px; overflow: hidden; object-fit:cover">
+		<img src="{{image}}" 
+		alt="Meal" width="500" height="500">
+		</div>
+		<h1>{{title}}</h1>
+		<div class="additional">{{servings}}</div>
+		<p>{{note}}
+		</p>
+		<a href= "/instructions" style="text-decoration:none;">
+			<p><button>Let's cook!</button></p>
+		</a>
+	</div>
+</div>
+{{/each}}
+ 		<div class="navbar">
+			<a href="/homepage">
+				<button class="btnhome"><i class="fas fa-home"></i></button>	
+			</a>
+			<a href="/profile">
+				<button class="btnprofile"><i class="far fa-user"></i></button>	
+			</a>
+			<a href="/upload">
+				<button class="btnadd"><i class="far fa-plus-square"></i></button>	
+			</a>
+		</div>
+</body>
+</html>
