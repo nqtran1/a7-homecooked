@@ -10,15 +10,22 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery.js%22%3E"></script>
-
+<div class="hed" style="padding:10px; background-color:silver">
+    <button onclick="goBack()">Go Back</button>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 </head>
+
 <style>
 * {box-sizing: border-box}
 </style>
 </head>
 <body>
 <div class="container">
-
     <button class="tablink" onclick="openPage('Ingredients', this, 'orange')">Ingredients</button>
     <button class="tablink" onclick="openPage('Steps', this, 'orange')" id="defaultOpen">Steps</button>
 {{#each recipes}}

@@ -14,6 +14,7 @@
 <!-- This is the page that allows users to look at a specific recipe card -->
 <body>
 <div class="container">
+	<div class="container2" style="margin-bottom:80px;">
 {{#each messages}}
 	<div class="profiletab">
 		<img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg" 
@@ -35,7 +36,53 @@
 		<a href= "/instructions" style="text-decoration:none;">
 			<p><button>Let's cook!</button></p>
 		</a>
+		<style>
+		.collapsible {
+		background-color: peachpuff;
+		color: white;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+		background-color: #555;
+		}
+
+		.content {
+		padding: 0 18px;
+		display: none;
+		overflow: hidden;
+		background-color: #f1f1f1;
+		}
+		</style>
+		<button type="button" class="collapsible">Recipe History</button>
+		<div class="content">
+		<p>This recipe was passed down from my grandmother. When I was younger, we weren't as well off, and we learned how to make lots of different things using leftover ingredients. I wish I'd asked your grandma to write down more of her recipes, but apps like this didn't exist back then!</p>
+		</div>
+
+		<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} else {
+			content.style.display = "block";
+			}
+		});
+		}
+		</script>
 	</div>
+</div>
 </div>
 {{/each}}
  		<div class="navbar">

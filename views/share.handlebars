@@ -3,6 +3,7 @@
 	<title>Homecooked Share Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
 	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	<link href="/css/recipestyle.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 	<!-- add icon library -->
 	<script src="https://kit.fontawesome.com/4a1064862d.js" crossorigin="anonymous"></script>
@@ -12,11 +13,103 @@
 
 </head>
 <body>
-    <h1 style="float:left; padding: 30px;"> This will be the page that leads users to the share recipe function.</h1>
-	  <div style="padding:40px;">
-        <a href="/homepage">
-            <button class="button1"><i class="fas fa-home"></i></button>	
-        </a>
-    </div>
+    <div class="big_container">
+		<h1 style="margin-top: 35px; text-align:left;">Select a recipe to share.</h1>
+		<div class="send" style="padding:10px;">
+			<!-- Search bar -->
+			<form class="search" action="/share">
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<p style="font-size:15px; text-align:center; margin-top: -10px;">Suggested</p>
+		<div class= "gallery" style="padding:4px; margin-top: -20px;">
+		<div class="row">
+			<div class="column">
+				<p id="test">
+				<img src="https://bakerbynature.com/wp-content/uploads/2013/12/IMG_5986-2-200x300.jpg" alt="Recents" style="width:100%" border="0">
+				</p>
+			</div>
+			<div class="column">
+				<p id="test">
+				<img src="https://realfoodrealdeals.com/wp-content/uploads/2014/10/chicken-chili-recipe-rfrd-1-200x300.jpg" alt="Recents" style="width:100%" border="0">
+				</p>
+			</div>
+			<div class="column">
+				<p id="test">
+				<img src="https://millersfoodmarket.com/wp-content/uploads/2020/06/Turmeric-Fried-Rice-LEAD-7-200x300-2.jpg" alt="Recents" style="width:100%" border="0">
+				</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="sendto" style="margin-bottom: 75px;">
+		<h1>Select someone to share your recipe to.</h1>
+		<div class="send" style="padding:10px;">
+			<!-- Search bar -->
+			<form class="search" action="/share">
+				<input type="text" placeholder="Search.." name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<p style="font-size:15px; text-align:center; margin-top: -10px;">Suggested</p>
+		<form action="/share">
+			<input type="checkbox" id="user1" name="molly">
+			<label for="user1"> Molly W.</label><br>
+			<input type="checkbox" id="user2" name="gordan">
+			<label for="user2"> Gordan R.</label><br>
+			<input type="checkbox" id="user3" name="dean">
+			<label for="user3"> Dean T.</label><br><br>
+
+			<style>
+				.parent {
+					display: flex;
+					justify-content: center;
+				}
+				.sendbtn{
+					border: 3px;
+					border-radius: 10px;
+					size: 9x;
+					background-color: peachpuff;
+					padding: 19px 28px;
+					font-size: 20px;
+					cursor: pointer;
+					display: inline-block;
+					color: black;
+					width: 200px;
+				}
+				.sendbtn:hover {background: #eee;}
+			</style>
+			<div class="parent">
+				<button class="sendbtn" onclick="confirmed()">Send</button>
+			</div>
+		</form>
+
+	</div>
+	</div>
+	 	<div class="navbar">
+			<a href="/homepage">
+				<button class="btnhome"><i class="fas fa-home"></i></button>	
+			</a>
+			<a href="/profile">
+				<button class="btnprofile"><i class="far fa-user"></i></button>	
+			</a>
+			<a href="/upload">
+				<button class="btnadd"><i class="far fa-plus-square"></i></button>	
+			</a>
+		</div>
 </body>
+			<script>
+				document.getElementById("test").onclick = function() {
+					recipeSelect()
+				};
+
+				function recipeSelect() {
+					document.getElementById("test").innerHTML = "This recipe has been selected.";
+				}
+
+				function confirmed() {
+					alert("You have successfully sent this recipe!")
+				}
+			</script>
 </html>
