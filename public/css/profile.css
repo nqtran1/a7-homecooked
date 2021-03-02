@@ -122,30 +122,6 @@ body{
   float: left;
 }
 
-.btnadd {
-  border: none;
-  size: 9x;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 30px;
-  cursor: pointer;
-  display: inline-block;
-  color: white;
-  float: right;
-}
-
-.btnprofile {
-  border: none;
-  size: 9x;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 30px;
-  cursor: pointer;
-  display: inline-block;
-  color: white;
-  float: right;
-}
-
 * {
   box-sizing: border-box;
 }
