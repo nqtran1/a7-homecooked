@@ -3,7 +3,7 @@
 	<title>Help Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
 	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/help.css" rel="stylesheet">
 	<!-- add icon library -->
 	<script src="https://kit.fontawesome.com/4a1064862d.js" crossorigin="anonymous"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -12,11 +12,47 @@
 
 </head>
 <body>
-    <h1 style="float:left; padding: 30px;"> This will be the page that allows users to locate help documentation.</h1>
-    <div style="padding:40px;">
-        <a href="/homepage">
-            <button class="button1"><i class="fas fa-home"></i></button>	
-        </a>
-    </div>
+	<h1 style="float:left; padding: 30px;"> Help </h1>
+    <div class="testbox">
+		<form action="/">
+		<div class="item">
+		<h2>About</h2>
+          <p>Homecooked is an app that allows you and your friends/family to share and receive recipes to cherish for generations.</p>
+		  </div>
+		<div class="item">
+		<h2>Navigation bar</h2>
+          <p>In the navigation bar at the bottom of your screen, there are three buttons. 
+			  <ul> 
+				<li>On the left side, the home button will bring you back to the homepage.</li>
+				<li>On the right side, the addition button allows you to upload a recipe. There you can fill out each section according to your recipe and add any additional notes you want to say to the person you are sending the recipe to.</li>
+				<li>To the right of the addition button, the avatar button will take you to your profile page. Here you can change your profile picture and view your user information.</li>
+			  </ul>
+			  </p>
+		  </div>
+		  <div class="item">
+		<h2>Homepage</h2>
+          <p>On the top right of your homepage, there is a message button which will lead you to your inbox. From there, you can find recipes that were sent to you.</p>
+			  <p>There are also three buttons in the middle of your home page.
+			  <ul> 
+				<li>The first button is "My Recipes" which includes your saved recipes.</li>
+				<li>The second button is "Favorites" which will have all the recipes you favorited.</li>
+				<li>The third button is "Share" which you can access your uploaded recipes and send them to your friends/family.</li>
+			  </ul>
+		  </p>
+		  </div>
+		  </form>
+	</div>
+
+	 		<div class="navbar">
+			<a href="/homepage">
+				<button class="btnhome"><i class="fas fa-home"></i></button>	
+			</a>
+			<a href="/profile">
+				<button class="btnprofile"><i class="far fa-user"></i></button>	
+			</a>
+			<a href="/upload">
+				<button class="btnadd"><i class="far fa-plus-square"></i></button>	
+			</a>
+		</div>
 </body>
 </html>
