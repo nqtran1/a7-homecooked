@@ -16,9 +16,25 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <div class="hed" style="padding:20px; margin-bottom: -15px;background-color:white">
+    	<button style="width: 150px;
+						padding: 10px;
+						border: none;
+						border-radius: 5px; 
+						background: #ffa909;
+						font-size: 16px;
+						color: #fff;
+						cursor: pointer;" onclick="goBack()">Go Back</button>
+	</div>
+	<script>
+	function goBack() {
+	window.history.back();
+	}
+</script>
+
 </head>
 <body>
-    <div class="container1">
+    <div class="container1" style="padding:20px; margin-bottom:50px;">
         <div class="title">
             <h1 style="padding:25px; background-color:orange; color: white;">Profile</h1>
         </div>
@@ -87,12 +103,14 @@
                 </div>
             </form>  
         </div>  
-</div>  
-
- 		<div class="navbar">
-			<a href="/homepage">
-				<button class="btnhome"><i class="fas fa-home"></i></button>	
-			</a>
-		</div>
+</div>
+<footer>
+    <div class="navbar" style="bottom:0; position:fixed;">
+        <a href="/homepage">
+            <button class="btnhome"><i class="fas fa-home"></i></button>	
+        </a>
+    </div>
+</footer>
 </body>
+
 </html>
