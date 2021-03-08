@@ -22,6 +22,8 @@ var upload = require('./routes/upload');
 var favorites = require('./routes/favorites');
 var help = require('./routes/help');
 var register = require('./routes/register');
+var MYinstructions = require('./routes/MYinstructions');
+var MYrecipecard = require('./routes/MYrecipecard');
 
 var app = express();
 
@@ -61,10 +63,9 @@ app.get('/favorites', favorites.view);
 app.get('/upload', upload.view);
 app.get('/help', help.view);
 app.get('/register', register.view);
+app.get('/MYinstructions', MYinstructions.view);
+app.get('/MYrecipecard', MYrecipecard.view);
 
-//get username from login
-// app.get('/username', username.adminView);
-// app.post('addUsername', username.addUsername);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

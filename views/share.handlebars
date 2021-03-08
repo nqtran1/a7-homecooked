@@ -41,18 +41,23 @@
 		<div class= "gallery" style="padding:4px; margin-top: -20px;">
 		<div class="row">
 			<div class="column">
+				{{#each MYmessages}}
 				<p id="test">
-				<img src="https://bakerbynature.com/wp-content/uploads/2013/12/IMG_5986-2-200x300.jpg" alt="Recents" style="width:100%" border="0">
+				<img src="{{image}}" alt="Recents" style="width:100%" border="0">
+				{{title}}
 				</p>
+				{{/each}}
 			</div>
 			<div class="column">
 				<p id="test">
 				<img src="https://realfoodrealdeals.com/wp-content/uploads/2014/10/chicken-chili-recipe-rfrd-1-200x300.jpg" alt="Recents" style="width:100%" border="0">
+				Chicken chili
 				</p>
 			</div>
 			<div class="column">
 				<p id="test">
 				<img src="https://millersfoodmarket.com/wp-content/uploads/2020/06/Turmeric-Fried-Rice-LEAD-7-200x300-2.jpg" alt="Recents" style="width:100%" border="0">
+				Fried rice
 				</p>
 			</div>
 		</div>
@@ -72,7 +77,7 @@
 			<input type="checkbox" id="user1" name="molly">
 			<label for="user1"> Molly W.</label><br>
 			<input type="checkbox" id="user2" name="gordan">
-			<label for="user2"> Gordan R.</label><br>
+			<label for="user2"> Adam R.</label><br>
 			<input type="checkbox" id="user3" name="dean">
 			<label for="user3"> Dean T.</label><br><br>
 

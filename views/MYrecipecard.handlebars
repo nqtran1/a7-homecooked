@@ -31,11 +31,11 @@
 <body>
 <div class="container">
 	<div class="container2" style="margin-bottom:90px;">
-{{#each messages}}
+{{#each MYmessages}}
 	<div class="profiletab">
 		<img src="https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51405259-stock-illustration-male-avatar-profile-picture-use.jpg" 
 		alt="Avatar" class="avatar">
-		<a href="/message" style="text-decoration:none;">
+		<a href="/MYrecipecard" style="text-decoration:none;">
 		<h1 style="font-size: 24px; padding: 10px; margin-top: 30px; float: left;">{{person}}</h1>
 		</a>
 	</div>
@@ -49,7 +49,7 @@
 		<div class="additional">{{servings}}</div>
 		<p>{{overview}}
 		</p>
-		<a href= "/instructions" style="text-decoration:none;">
+		<a href= "/MYinstructions" style="text-decoration:none;">
 			<p><button>Let's cook!</button></p>
 		</a>
 		<style>
@@ -80,6 +80,10 @@
 		<div class="content">
 		<p>{{history}}</p>
 		</div>
+
+		<a href= "/share" style="text-decoration:none;">
+			<p><button>Share</button></p>
+		</a>
 
 		<script>
 		var coll = document.getElementsByClassName("collapsible");
