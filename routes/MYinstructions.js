@@ -6,5 +6,5 @@
 var MYrecipedata = require('../MYrecipes.json');
 exports.view = function(req, res){
     console.log(MYrecipedata);
-    res.render('MYrecipecard', MYrecipedata);
+    res.render('MYinstructions', MYrecipedata);
   };
